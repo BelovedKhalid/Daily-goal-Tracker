@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Goals Settings</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#4338ca" />
+</head>
+<body class="settings-shell">
+  <div class="settings-card">
+    <div class="settings-header">
+      <h1>Settings</h1>
+      <p>Customize your experience with theme, wallpaper, and notification controls.</p>
+    </div>
+
+    <div class="settings-section">
+      <label class="setting-label" for="settingsThemeToggle">Theme</label>
+      <button id="settingsThemeToggle" class="toggle-button" type="button" aria-label="Toggle theme">☾</button>
+      <p class="note">Switch between light and dark mode from your settings page.</p>
+    </div>
+
+    <div class="settings-section">
+      <label class="setting-label" for="wallpaperFile">Wallpaper</label>
+      <input id="wallpaperFile" type="file" accept="image/*" />
+      <div id="wallpaperPreview" class="wallpaper-preview">No wallpaper selected</div>
+      <button id="wallpaperClearButton" class="secondary-button" type="button">Clear wallpaper</button>
+    </div>
+
+    <div class="settings-section">
+      <label class="setting-label">Notifications</label>
+      <button id="notificationToggle" class="toggle-button" type="button" aria-label="Toggle reminders">Off</button>
+      <p class="note">Turn reminders on or off whenever you want.</p>
+    </div>
+
+    <div class="settings-section">
+      <label class="setting-label" for="notificationSoundSelect">Notification sound</label>
+      <select id="notificationSoundSelect" class="audio-select">
+        <option value="chime">Chime</option>
+        <option value="bell">Bell</option>
+        <option value="ping">Ping</option>
+      </select>
+      <button id="soundPreviewButton" class="secondary-button" type="button">Preview sound</button>
+      <p class="note">Pick a sound that plays when a reminder is due.</p>
+    </div>
+
+    <div class="settings-actions">
+      <button id="backButton" class="secondary-button" type="button">Back to planner</button>
+    </div>
+    <p id="settingsMessage" class="settings-message"></p>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>

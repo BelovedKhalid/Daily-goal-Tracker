@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Goals Signup</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#4338ca" />
+</head>
+<body class="signup-shell">
+  <div class="signup-header">
+    <h1>Daily Goals Tracker</h1>
+    <p>Plan your day, set goal times, and get reminders when it’s time to act.</p>
+  </div>
+  <div class="signup-card">
+    <p class="signup-intro">Welcome to Daily Goals. Create your account name to continue to the full planner app.</p>
+    <form id="signupForm">
+      <div class="field-row">
+        <label for="signupName">Your name</label>
+        <input id="signupName" type="text" placeholder="Enter your name" autocomplete="name" />
+      </div>
+      <div class="signup-actions">
+        <button id="signupSubmitButton" type="submit">Continue</button>
+        <button id="signupClearButton" type="button" class="secondary-button">Clear</button>
+      </div>
+    </form>
+    <p id="signupMessage"></p>
+    <button id="continueButton" class="secondary-button hidden" type="button">Continue to app</button>
+  </div>
+  <script src="signup.js"></script>
+</body>
+</html>

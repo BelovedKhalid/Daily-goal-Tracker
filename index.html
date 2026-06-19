@@ -1,10 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Website!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Goals</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#4338ca" />
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>I just successfully hosted my very first website on GitHub Pages! 🎉</p>
+  <div class="app-shell">
+    <header>
+      <div class="header-top">
+        <div class="header-side">
+          <h2 id="userWelcome" class="user-welcome">Welcome! Sign up to personalize your experience.</h2>
+          <div class="calendar-container">
+            <div class="calendar-header">
+              <button id="calendarPrev" type="button" aria-label="Previous month">←</button>
+              <span id="calendarMonthYear"></span>
+              <button id="calendarNext" type="button" aria-label="Next month">→</button>
+            </div>
+            <div class="calendar-grid" id="calendarGrid"></div>
+          </div>
+        </div>
+        <div class="header-clock">
+          <div class="clock">
+            <span id="currentTime">--:--:--</span>
+            <span id="currentDate">Loading date...</span>
+          </div>
+        </div>
+        <button id="settingsButton" class="icon-button settings-icon" type="button" aria-label="Open settings">⚙</button>
+      </div>
+      <div class="header-actions">
+          <div id="progressSummary" class="progress-summary">Add your first goal to get started.</div>
+        </div>
+    </header>
+
+    <section class="goal-form">
+      <h2>Add a goal</h2>
+      <div class="field-row">
+        <label for="goalText">Goal</label>
+        <input id="goalText" type="text" placeholder="What do you want to do?" />
+      </div>
+      <div class="field-row">
+        <label for="goalTime">Time</label>
+        <input id="goalTime" type="time" />
+      </div>
+      <button id="addGoalButton">Save daily goal</button>
+      <p class="note">Use Settings to configure dark mode, wallpaper, and reminders.</p>
+      <p id="notificationWarning" class="note warning hidden"></p>
+    </section>
+
+    <section class="status-panel">
+      <div>
+        <h2>Today’s goals</h2>
+        <ul id="goalList" class="goal-list"></ul>
+      </div>
+      <div class="summary-cards">
+        <div class="card"><strong id="pendingCount">0</strong><span>Pending</span></div>
+        <div class="card success"><strong id="completedCount">0</strong><span>Completed</span></div>
+        <div class="card missed"><strong id="missedCount">0</strong><span>Missed</span></div>
+      </div>
+    </section>
+
+    <section class="daily-summary">
+      <h2>Daily summary</h2>
+      <div id="finalMessage" class="final-message"></div>
+      <div class="history-block">
+        <h3>Past days</h3>
+        <div class="history-columns">
+          <div>
+            <h4>Successes</h4>
+            <ul id="successList"></ul>
+          </div>
+          <div>
+            <h4>Not accomplished</h4>
+            <ul id="missedList"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="installPrompt" class="install-prompt hidden">
+      <div class="install-prompt-content">
+        <div class="install-prompt-text">
+          <p>Install Daily Goals Tracker as an app for quick access and offline support.</p>
+        </div>
+        <div class="install-prompt-actions">
+          <button id="installButton" class="install-btn" type="button">Install app</button>
+          <button id="dismissInstallButton" class="dismiss-btn" type="button">Not now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+{
+  "name": "Daily Goals Tracker",
+  "short_name": "Daily Goals",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#eff6ff",
+  "theme_color": "#4338ca",
+  "description": "Track daily goals, get reminders and review your accomplishments."
+}
